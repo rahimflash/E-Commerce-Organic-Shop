@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+{% extends 'layout.html' %}
+{% block body %}
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styler.css')}}">
+    <!--<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!---- <script src="js/bootstrap.min.js"></script>
+    <script src="js/fontawesome.min.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.min.js"></script>
+    <script src="js/popper.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+</head>
+<body>
+    <!--------About Us------->
+
+    <section id="about">
+        <div class="container">
+            <h1 class="text-center">About Us</h1>
+            <div class="row">
+                <div class="col-md-6">
+                   <div class="about-content">
+                     <h5>What A110 Organic Shop Do</h3>
+                     We connect buyers and sellers of natural, organic, environmentally sound products. Essentially, the good stuff is right here. <br>
+                     <br>
+                     We find the best suppliers and makers of natural and organic products that you won’t find on the high street. If you care about how things get made and what’s in them, we bring you products created with care. <br>
+                     <br>
+                     We promote small craft sellers, micro product makers, as well as more established brands. Our sellers manage their shops independently, so they keep their business how they want it and customers get a truly personal service. <br>
+                     <br>
+                     You will be able to find in our e-commerce Health & Beauty products, Food & Drink, Home & Garden, Baby & Child, Natural Gifts and Pet Care products. <br>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                   <div class="about-content">
+                     <h5>Why We Care about Sustainability and Environment</h3>
+                        We want to make it easy to find the good stuff. We want everyone to be able to choose products that have less environmental impact. <br>
+                         <br>
+                        Our aim is to connect people, share stories and help independent ‘eco-businesses’ to grow. <br>
+                        <br>
+                        Our passion is for our planet. We believe it should be easy to live well and care for the environment and the natural world. Why not? <br>
+                        <br>
+                        By supporting the natural and organic trade, we can promote its benefits and support wider issues that mean a lot to us. <br>
+                        <br>
+                        Our market isn’t going to save the world. But it might help in a small way to increase sustainability. And that’s OK with us. <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------Services-------->
+    <section id="services">
+        <div class="container text-center">
+            <h1>Our Marketplace Mission</h1>
+            <div class="row services">
+                <div class="col-md-12 text-center">
+                    <div class="icon">
+                    <i class="fa fa-shopping-basket"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                     <h6> To be an ethical business, taking small steps to a better, healthier planet. <br>
+                      <br>
+                        We provide a trusted place where unique products created with care for ingredients, and for the environment can be easily found. <br>
+                        <br>
+                        We connect and promote the people who make and sell natural and organic goodies to a growing market of conscious buyers.</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--------Team Members------->
+<section id="team">
+<div class="container">
+    <h1>Our Team</h1>
+    <div class="row">
+        <div class="col-md-4 profile-pic text-center">
+        <div class="img-box">
+            <img src="{{url_for('static',filename='img/enoch.jpg')}}" class="img-responsive">
+            <ul>
+                <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+            </ul>
+        </div>
+        <h2>Peprah Enoch Baffoe</h2>
+        <h3>Project Manager</h3>
+        </div>
+        <div class="col-md-4 profile-pic text-center">
+            <div class="img-box">
+                <img src="{{url_for('static',filename='img/flash.jpg')}}" class="img-responsive">
+                <ul>
+                    <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                    <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                    <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+            </div>
+            <h2>Twum Gilbert</h2>
+            <h3>Full Stack Developer</h3>
+            </div>
+            <div class="col-md-4 profile-pic text-center">
+                <div class="img-box">
+                    <img src="{{url_for('static',filename='img/agyengo.jpg')}}" class="img-responsive">
+                    <ul>
+                        <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                </div>
+                <h2>Agyemang Yaw</h2>
+                <h3>Front End Developer</h3>
+                </div>
+                <div class="col-md-4 profile-pic text-center">
+                    <div class="img-box">
+                        <img src="{{url_for('static',filename='img/mccall.jpg')}}" class="img-responsive">
+                        <ul>
+                            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                            <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                        </ul>
+                    </div>
+                    <h2>Mensah Amos Adu</h2>
+                    <h3>Database Manager</h3>
+                    </div>
+                    <div class="col-md-4 profile-pic text-center">
+                        <div class="img-box">
+                            <img src="{{url_for('static',filename='img/youngish.jpg')}}" class="img-responsive">
+                            <ul>
+                                <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                            </ul>
+                        </div>
+                        <h2>Agbenya Ishmael</h2>
+                        <h3>HR Manager</h3>
+                        </div>
+                        <div class="col-md-4 profile-pic text-center">
+                            <div class="img-box">
+                                <img src="{{url_for('static',filename='img/eugene.jpg')}}" class="img-responsive">
+                                <ul>
+                                    <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                    <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                    <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                                </ul>
+                            </div>
+                            <h2>Fredua-Mensah Eugene</h2>
+                            <h3>Back-End Developer</h3>
+                            </div>
+                            <div class="col-md-4 profile-pic text-center">
+                                <div class="img-box">
+                                    <img src="{{url_for('static',filename='img/deen.jpg')}}" class="img-responsive">
+                                    <ul>
+                                        <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                        <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                        <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                                    </ul>
+                                </div>
+                                <h2>Abdulai Mohammed Nurudeen</h2>
+                                <h3>Back-End Developer</h3>
+                                </div>
+                                <div class="col-md-4 profile-pic text-center">
+                                    <div class="img-box">
+                                        <img src="{{url_for('static',filename='img/ben.jpg')}}" class="img-responsive">
+                                        <ul>
+                                            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                                        </ul>
+                                    </div>
+                                    <h2>Essiamah Bernard</h2>
+                                    <h3>Front-End Developer</h3>
+                                    </div>
+                                    <div class="col-md-4 profile-pic text-center">
+                                        <div class="img-box">
+                                            <img src="{{url_for('static',filename='img/ahmed.jpg')}}" class="img-responsive">
+                                            <ul>
+                                                <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                                <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                                <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                                            </ul>
+                                        </div>
+                                        <h2>Mohammed Ahmed Abdulkadir</h2>
+                                        <h3>Database Manager</h3>
+                                        </div>
+    </div>
+</div>
+</section>
+
+<!---------Contact-------->
+<section id="promo">
+    <div class="container">
+        <h4>Speak to our Team</h4>
+        <p>We're friendly bunch</p>
+        <a href="#contact" class="btn btn-primary">Contact Us</a>
+    </div>
+</section>
+
+<!----------Testimonials----------->
+<section id="testimonials">
+    <div class="container">
+        <h1>Testimonials</h1>
+        <p class="text-center">Sell With Our Online Shop</p>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="profile">
+                    <img src="{{url_for('static',filename='img/jef.jpg')}}" class="user">
+                    <blockquote>Do you have a natural product or range you want to get to market? <br> Highly recommended </blockquote>
+                        <h3>Jephtah Yankey <span> Lecturer at KNUST</span></h3>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="profile">
+                    <img src="{{url_for('static',filename='img/ceo.jpg')}}" class="user">
+                    <blockquote>I sell and shop with A110 Organi Shop. Believe me they are awesome. <br> Highly recommended </blockquote>
+                        <h3>Mr. Twumasi <span> CEO at Relish Shop</span></h3>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="profile">
+                    <img src="{{url_for('static',filename='img/sho.jpg')}}" class="user">
+                    <blockquote>The best place to sell and shop for your Organic products. <br> Highly recommended </blockquote>
+                        <h3>Mrs Shobhita Soor <span>Founder at Aspire Food </span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------Get In Touch------>
+<section id="contact">
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <div class="row">
+            <div class="col-md-6">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            </div>
+            <div class="col-md-6 contact-info">
+             <div class="follow">
+                 <b>Address:</b><i class="fa fa-map-marker"></i> Ayeduase Road, Kumasi, GH
+             </div>
+                <div class="follow">
+                    <b>Phone:</b><i class="fa fa-phone"></i> +233 501 656 945
+                </div>
+                <div class="follow">
+                    <b>Email:</b><i class="fa fa-envelope-o"></i> a110organicshop@gmail.com
+                </div>
+                <div class="follow"><label>
+                    <b>Get Social:</b></label>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+
+                </div>
+               </div>
+        </div>
+    </div>
+</section>
+
+<script src="{{url_for('static',filename='js/smooth-scroll.js')}}"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+</body>
+
+{% endblock %}
+</html>

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+    <div class="container"><a class="navbar-brand logo" href="/">Organic</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse"
+            id="navcol-1">
+            <div class="float-left float-md-right mt-5 mt-md-0 search-area">
+                <form class="form-inline" method="post" action="/search"><input class="form-control float-left float-sm-right custom-search-input" name="search" type="text" placeholder="Search for products"><button class="btn btn-link btn-sm" type="submit"><i class="fas fa-search bg-white border-white shadow-none float-left search-icon"></i></button></form>
+            </div>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item item" role="presentation"><a class="nav-link" href="/">HOME</a></li>
+                <li class="nav-item item" role="presentation"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item item" role="presentation"><a class="nav-link" href="/cart"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+                <li class="nav-item item" role="presentation">
+                    <div class="nav-item dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fa fa-user"></i></a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="/profile"><i class="fa fa-user-circle-o"></i>&nbsp;Profile</a><a class="dropdown-item" role="presentation" href="/orders"><i class="fa fa-cart-arrow-down"></i>Orders</a>
+                            <a
+                                class="dropdown-item" role="presentation" href="/wishlist"><i class="fa fa-heart"></i>&nbsp;Wishlist</a><a class="dropdown-item" role="presentation" href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

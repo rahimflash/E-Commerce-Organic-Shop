@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <main class="page shopping-cart-page">
+        <section class="clean-block payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Order Success</h2>
+                </div>
+                <form method="post" action="/ordertracking">
+                    <div class="products">
+                        <p class="text-center">Your order has been placed</p>
+                        <p class="text-center">Your tracking number is <b>{{trackingNumber}}</b<</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

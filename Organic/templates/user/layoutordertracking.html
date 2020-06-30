@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <main class="page shopping-cart-page">
+        <section class="clean-block payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Order Tracking</h2>
+                    <p>Enter tracking Number below</p>
+                </div>
+                <form method="post" action="/orders">
+                    <div class="products"><input class="form-control" name="trackingNumber" type="search"><button class="btn btn-primary" type="submit">Track</button></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    {% endblock %}

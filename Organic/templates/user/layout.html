@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Organic Shop</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/simple-line-icons.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/fontawesome5-overrides.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/Search-Input-responsive.css')}}
+">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/smoothproducts.css')}}">
+</head>
+
+<<body style="background-image: url({{ url_for('static', filename='image/') }}); margin-top: 57px">
+    {% include 'includes/_navbar.html' %}
+    <div class="container">
+        {% block body %}  {% endblock %}
+    <script src="{{url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="{{url_for('static',filename='assets/js/smoothproducts.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/theme.js')}}"></script>
+</body>
+{% include 'includes/_footer.html' %}
+</html>

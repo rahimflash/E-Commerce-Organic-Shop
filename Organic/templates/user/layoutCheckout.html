@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <main class="page shopping-cart-page">
+        <section class="clean-block payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Checkout</h2>
+                    <p>Payments are made on delivery</p>
+                    <p>The change in prices is because the shipping fee for each product has been ordered</p
+                </div>
+                <form method="post" action="/checkout">
+                    <div class="products">
+                        <h3 class="title">Checkout</h3>
+                        {%for item in cart%}
+                        {%set price=1.1*item.qty*item.price%}
+                        <div class="item"><span class="price">GH₵{{"%.2f"|format(price)}}<br></span>
+                            <p class="item-name">{{item.name}}</p>
+                            <p class="item-description">{{item.nameOfShop}}</p>
+                        </div>
+                        {%endfor%}
+                        <div class="total"><span>Total</span><span class="price"><br><strong>GH₵{{"%.2f"|format(total)}}</strong><br><br></span></div>
+                    </div>
+                    <div class="card-details">
+                        <h3 class="title">Recepient Details</h3>
+                        <div class="form-row">
+                            <div class="col-sm-7">
+                                <div class="form-group"><label for="card-holder">Name Of Recipient</label><input class="form-control" type="text" placeholder="Name Of Recipient" name="recipientName" required="" maxlength="70"></div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-group"><label>Location</label>
+                                    <div class="input-group expiration-date"><input class="form-control" type="text" placeholder="region" name="region" required="" maxlength="45"><input class="form-control" type="text" placeholder="city" name="city" required="" maxlength="45"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-xl-7">
+                                <div class="form-group"><label for="card-number">Address</label><input class="form-control" type="text" name="address" placeholder="Address" maxlength="128"></div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group"><label for="card-number">phone Number</label><input class="form-control" type="text" placeholder="Phone Number" required="" name="phoneNumber" pattern="^[0-9]*$" minlength="10" maxlength="10"></div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Proceed</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    {% endblock %}

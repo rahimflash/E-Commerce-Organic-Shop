@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <main class="page shopping-cart-page">
+        <section class="clean-block clean-cart dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Order Tracking for {{trackingNumber}}</h2>
+                    <p></p>
+                </div>
+                <div class="content">
+                    <div class="row no-gutters">
+                        <div class="col-md-12 col-lg-9">
+                            <div class="items">
+                                {%for item in product%}
+                                <div class="product">
+                                    <form>
+                                        <div class="form-row justify-content-center align-items-center">
+                                            <div class="col-md-3">
+                                                <div class="product-image"><img class="img-thumbnail img-fluid d-block mx-auto image" src="{{ url_for('static', filename='Images/product/'+item.image1)}}" width="130" height="130"></div>
+                                            </div>
+                                            <div class="col-md-5 product-info"><a class="product-name" href="/product/{{item.id}}/{{item.name}}">{{item.name}}</a>
+                                                <div class="product-specs">
+                                                    
+                                                    <div><span>status: </span><span class="value">{{item.status}}</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-2 col-lg-2 quantity"><label class="d-none d-md-block" for="quantity">Quantity</label><span>{{item.qty}}</span><input class="form-control" type="hidden" value="{{item.productId}}" name="productId"></div>
+                                            <div class="col-6 col-md-2 price"><span><br>GH₵{{"%.2f"|format(item.price)}}<br></span></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                {%endfor%}
+
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-3">
+                            <div class="summary">
+                                <h3>TOTAL</h3>
+                                <h4><span class="text">Total</span><span class="price">GH₵{{"%.2f"|format(total)}}<br></span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% endblock %}

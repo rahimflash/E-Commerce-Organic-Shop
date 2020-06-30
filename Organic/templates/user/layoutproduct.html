@@ -1,0 +1,101 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <main class="page shopping-cart-page">
+        <section class="clean-block clean-product dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Product Page</h2>
+                </div>
+                <div class="block-content">
+                    <div class="product-info">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="gallery">
+                                    {% set n=2%}
+                                    {%if (item.image2 == None)%}
+                                    {% set n=n-1%}
+                                    {%elif item.image3==None%}
+                                    {% set n=n-1%}
+                                    {%endif%}
+                                    {%if n>=2%}
+                                    <div class="sp-wrap"><a href="{{ url_for('static', filename='Images/product/'+item.image1)}}"><img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='Images/product/'+item.image1)}}"></a><a href="{{ url_for('static', filename='Images/product/'+item.image2)}}"><img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='Images/product/'+item.image2)}}"></a>
+                                        <a
+                                            href="{{ url_for('static', filename='Images/product/'+item.image3)}}"><img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='Images/product/'+item.image3)}}"></a>
+                                    </div>
+                                    {%else%}
+                                     <div class="sp-wrap"><a href="{{ url_for('static', filename='Images/product/'+item.image1)}}"><img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='Images/product/'+item.image1)}}"></a><a href="{{ url_for('static', filename='Images/product/'+item.image1)}}"><img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='Images/product/'+item.image1)}}"></a>
+                                        <a
+                                            href="{{ url_for('static', filename='Images/product/'+item.image1)}}"><img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='Images/product/'+item.image1)}}"></a>
+                                    </div>
+                                    {%endif%}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info">
+                                    <h3>{{item.name}}</h3>
+                                    <div class="price">
+                                        <form method="post" action="/addtocart">
+                                            <h3>GH₵{{"%.2f"|format(item.price)}}<br></h3><input class="form-control" type="hidden" name="id" value="{{item.id}}"><input class="form-control" type="number" step="1" min="1" max="{{item.qty}}" placeholder="qty" name="qty" value="1">
+                                            <button
+                                                class="btn btn-primary" type="submit"><i class="icon-basket"></i>Add to Cart</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="description-tab" href="#description">Description</a></li>
+                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="specifications-tabs" href="#specifications">Specifications</a></li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show description" role="tabpanel" id="description">
+                                    <p>{{item.description}}</p>
+                                </div>
+                                <div class="tab-pane fade show specifications" role="tabpanel" id="specifications">
+                                    <div class="table-responsive table-bordered">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="stat">Weight</td>
+                                                    <td>{{item.weight}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="stat">Dimension</td>
+                                                    <td>{{item.dimension}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%if related%}
+                    <div class="clean-related-items">
+                        <h3>Related Products</h3>
+                        <div class="items">
+                            <div class="row justify-content-center">
+                                {%for item in related%}
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="clean-related-item">
+                                        <div class="image"><a href="/product/{{item.id}}/{{item.name}}"><img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='Images/product/'+item.image1)}}"></a></div>
+                                        <div class="related-name"><a href="#">{{item.name}}</a>
+                                            <h4>GH₵{{"%.2f"|format(item.price)}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                {%endfor%}
+                            </div>
+                        </div>
+                    </div>
+                    {%endif%}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% endblock %}

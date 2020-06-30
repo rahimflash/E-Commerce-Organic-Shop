@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ORGANIC| Register</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="{{url_for('static',filename='fonts/fontawesome-all.min.css')}}">
+</head>
+
+<body class="bg-gradient-primary">
+    <div class="container">
+        <div class="card shadow-lg o-hidden border-0 my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-7 offset-xl-3">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h4 class="text-dark mb-4">Create a Sellers Account!</h4>
+                            </div>
+                            <form class="user" method="post" action="/seller/signup">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="Fname" placeholder="First Name" name="Fname" required="" maxlength="35"></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="Lname" placeholder="Last Name" name="Lname" required="" maxlength="35"></div>
+                                </div>
+                                <div class="form-group text-lowercase"><input class="form-control form-control-user" type="email" id="email" aria-describedby="emailHelp" placeholder="Email Address" name="email" required="" maxlength="255"></div>
+                                <div class="form-group"><input class="form-control form-control-user" type="text" id="nameOfShop" required="" name="nameOfShop" placeholder="Name of your Shop" maxlength="255" pattern="^[a-zA-Z0-9- ]*$"></div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col"><input class="form-control form-control-user" type="text" id="region" required="" name="region" placeholder="region" maxlength="255"></div>
+                                        <div class="col"><input class="form-control form-control-user" type="text" id="city" required="" name="city" placeholder="city" maxlength="255"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="password" placeholder="Password" name="password" minlength="8" required="" maxlength="128"></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="repeatPassword" placeholder="Repeat Password" name="password_repeat" minlength="8" required="" maxlength="128"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col"><input class="form-control" type="tel" id="phoneNumber" pattern="^[0-9]*$" required="" minlength="10" maxlength="10" name="phoneNumber" placeholder="phone number (eg. 0570001234)"></div>
+                                </div><button class="btn btn-primary btn-block text-white btn-user" id="btnSubmit" type="submit">Register Account</button>
+                                <hr>
+                                <hr>
+                                <div class="text-center"><strong>{{msg}}</strong></div>
+                            </form>
+                            <div class="text-center"><a class="small" href="/seller/login">Already have an account? Login!</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="{{url_for('static',filename='js/theme.js')}}"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                var password = $("#password").val();
+                var confirmPassword = $("#repeatPassword").val();
+                if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
+</body>
+
+
+</html>

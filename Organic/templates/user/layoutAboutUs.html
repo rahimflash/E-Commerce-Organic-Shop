@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>A110 OrganicShop</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/simple-line-icons.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/fontawesome5-overrides.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/Search-Input-responsive.css')}}
+">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/smoothproducts.css')}}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="/">Organic</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <div class="float-left float-md-right mt-5 mt-md-0 search-area">
+                    <form class="form-inline" method="post" action="/search"><input class="form-control float-left float-sm-right custom-search-input" name="search" type="search" placeholder="Search for products"><button class="btn btn-link btn-sm" type="submit"><i class="fas fa-search bg-white border-white shadow-none float-left search-icon"></i></button></form>
+                </div>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="/">HOME</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="/cart"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+                    <li class="nav-item item" role="presentation">
+                        <div class="nav-item dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fa fa-user"></i></a>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="/profile"><i class="fa fa-user-circle-o"></i>&nbsp;Profile</a><a class="dropdown-item" role="presentation" href="/orders"><i class="fa fa-cart-arrow-down"></i>Orders</a>
+                                <a
+                                    class="dropdown-item" role="presentation" href="/wishlist"><i class="fa fa-heart"></i>&nbsp;Wishlist</a><a class="dropdown-item" role="presentation" href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page shopping-cart-page">
+        <section class="clean-block clean-cart dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar1.jpg">
+                            <div class="card-body info">
+                                <h4 class="card-title">John Smith</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar2.jpg">
+                            <div class="card-body info">
+                                <h4 class="card-title">Robert Downturn</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar3.jpg">
+                            <div class="card-body info">
+                                <h4 class="card-title">Ally Sanders</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 offset-xl-1">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/signup">Sign up</a></li>
+                        <li><a href="/ordertracking">Track an order</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 offset-xl-1">
+                    <h5>Sell with us</h5>
+                    <ul>
+                        <li><a href="/seller/signup">Sign up to sell</a></li>
+                        <li><a href="/seller">Login to seller Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 offset-xl-1">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="/about">The Developers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2020 A110</p>
+        </div>
+    </footer>
+    <script src="{{url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="{{url_for('static',filename='assets/js/smoothproducts.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/theme.js')}}"></script>
+</body>
+
+</html>

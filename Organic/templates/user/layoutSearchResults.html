@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <main class="page shopping-cart-page">
+        <section class="clean-block clean-catalog dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info"></h2>
+                    <p>{{topic}}</p>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-12 offset-lg-0">
+                            <div class="products">
+                                <div class="row no-gutters">
+                                {% for item in product%}
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <form method='POST' action='/addtocart'>
+                                            <div class="clean-product-item">
+                                                <div class="image"><a href="/product/{{item.id}}/{{item.name}}"><img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='Images/product/'+item.image1)}}" width='150' height='150'></a></div>
+                                                <div class="product-name"><a href="/product/{{item.id}}/{{item.name}}">{{item.name}}</a></div>
+                                                <div class="about">
+                                                    <div class="price">
+                                                        <h3><strong>GH₵{{"%.2f"|format(item.price)}}</strong><br></h3>
+                                                        <input type='hidden' value='{{item.id}}' name='id'>
+                                                        <input type='hidden' value='1' name='qty'>
+                                                    </div><button class="btn btn-primary btn-sm" type="submit">Add to cart</button><a class="btn btn-primary btn-sm" role="button" href="/addtowishlist/{{item.id}}">Add to wishlist</a></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                {%endfor%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
