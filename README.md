@@ -54,9 +54,6 @@ Then run app.py in debug mode or run with 'python app.py' in the project directo
 (iii) See all Orders <br>
 (iv) Manage all Users <br>
 (v)  Approve Sellers posts<br>
-NB;  Admin Login Ccredentials
-(i) Email = bafpep@gmail.com & Password = 12345678<br>
-(ii) Email =twumgilbert7@gmail.com & Password = 12345678<br>
 
 ## Conclusion
 There are also many more feature which are not in the list. Feel free to explore this project. Thank you
